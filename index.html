@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      max-width: 80%;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #heart {
+      font-size: 2em;
+      color: #e74c3c;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    #letter {
+      text-align: left;
+      padding: 10px;
+      display: none;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #photos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    #photos img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    #message {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      resize: none;
+      border: none;
+      background-color: #fff;
+      font-size: 16px;
+    }
+
+    #submitBtn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="heart">❤️</div>
+    <h1>Feliz Aniversário, [Nome da Noiva]!</h1>
+    
+    <div id="photos">
+      <div class="photo"><img src="https://i.imgur.com/PmbUGcw.jpeg" alt="Foto 1"></div>
+      <div class="photo"><img src="caminho/para/foto2.jpg" alt="Foto 2"></div>
+      <!-- Adicione mais imagens conforme necessário -->
+    </div>
+
+    <div id="letter">
+      <h2>Mensagem de Aniversário</h2>
+      <textarea id="message" readonly>
+        Parabéns pelo seu dia, meu amor! 🎉
+
+        Ei amor, feliz aniversário! 🎉 Não dá para acreditar que você já está fazendo 20 anos. Parece que foi ontem que nos conhecemos no colégio, né? Quatro anos voaram e cada momento foi incrível.
+
+        Olha só, o Noah tá completando 9 meses hoje também, que coisa mais linda! Dois aniversários no mesmo dia, não podia ser mais perfeito. Nossa casinha tá cheia de vida e amor, construída com nossos sonhos.
+
+        Lembra daquela vez em setembro, quando começamos a namorar? Agora, é o mês do nosso noivado e logo vamos casar no mesmo dia. Mal posso esperar por isso!
+
+        Você é meu riso diário, minha companheira de aventuras e a razão do meu coração bater mais forte. Que esse aniversário seja só o começo de muitas alegrias pra gente.
+
+        Parabéns, meu amor! Te amo mais do que as palavras conseguem dizer.
+
+        Com todo o meu carinho,
+        Leonardo
+      </textarea>
+    </div>
+
+    <button id="submitBtn" onclick="mostrarMensagem()">Mostrar Mensagem</button>
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      var letter = document.getElementById('letter');
+      letter.style.display = 'block';
+      document.body.style.overflow = 'hidden';  // Impede a rolagem da página
+    }
+  </script>
+</body>
+</html>
